@@ -16,7 +16,6 @@ resource "aws_iam_role_policy_attachment" "AmazonEKS_CNI_PolicyAttachment" {
   role       = var.AmazonEKSNodeRole_name
 }
 
-
 # attach policy to this role 
 resource "aws_iam_role_policy_attachment" "EksClusterRolePolicyAttachment" {
   policy_arn = "arn:aws:iam::aws:policy/AmazonEKSClusterPolicy"
