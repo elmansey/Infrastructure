@@ -51,6 +51,8 @@ Before running the deployment script, you will need to have the following:
     ```bash
     $  ./infrastructure-up.sh
     ```
+
+## Build infrastructure
 ![image](https://github.com/elmansey/Infrastructure/assets/89076648/7690de87-08cb-4a88-bd2e-7d8d46b36855)
 
 ![image](https://github.com/elmansey/Infrastructure/assets/89076648/a61bf375-ef96-474c-a30d-172a435ad6f1)
@@ -61,5 +63,5 @@ Before running the deployment script, you will need to have the following:
 
 ![image](https://github.com/elmansey/Infrastructure/assets/89076648/f459d335-539a-4436-99d3-3167288c29d3)
 
-
+## Ansible configuration
 
