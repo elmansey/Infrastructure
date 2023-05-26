@@ -1,4 +1,3 @@
 - name: configure machine as BastionHost to install kubectl and awscli
   include_tasks: BastionHost.yaml
 
-
