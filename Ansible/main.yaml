@@ -1,0 +1,4 @@
+- name: configure machine to install prerequisite for slave, BastionHost and apply Jenkins Yaml files  
+  hosts: aws_ec2
+  roles:
+    - configuration

@@ -46,14 +46,21 @@ Before running the deployment script, you will need to have the following:
     $ cd Infrastructure 
     ```
 
-2. Run infrastructure-up.sh script to Initialize the Terraform configuration and apply it:
+2. Run Up.sh script to Initialize the Terraform configuration and apply it:
 
     ```bash
-    $  ./infrastructure-up.sh
+    $  ./Up.sh
     ```
 
+## Steps 
+
+- After run the Up.sh script at the first the terraform infrastracture code will applied in aws .
+- Then the ansible role will fired to get the BastionHost ip automatically by ansible dynamic inventory. 
+- Then the role will be applied to configre the bastionHost Ec2:
+  1- Install some prerequiest backages such as `awscli` to use it to update kubeconfig file and `kubectl` to able to connect to the Cluster from it
+
 ## Build infrastructure
-![image](https://github.com/elmansey/Infrastructure/assets/89076648/7690de87-08cb-4a88-bd2e-7d8d46b36855)
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/9590f163-1b07-406f-8f8f-0d61b84b2736)
 
 ![image](https://github.com/elmansey/Infrastructure/assets/89076648/a61bf375-ef96-474c-a30d-172a435ad6f1)
 
@@ -65,3 +72,10 @@ Before running the deployment script, you will need to have the following:
 
 ## Ansible configuration
 
+
+
+
+
+## Author
+
+- [Abdelrahman Elmansey ](https://www.linkedin.com/in/abdelrahman-elmansey/)
