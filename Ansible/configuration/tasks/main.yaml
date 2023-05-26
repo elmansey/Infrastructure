@@ -1,0 +1,2 @@
+- name: configure machine as BastionHost
+  include_tasks: BastionHost.yaml

@@ -1,0 +1,61 @@
+- name: update apt 
+  apt:
+    update_cache: yes
+
+
+- name: install dependances packages as a prerequisite
+  apt:
+    name: ca-certificates,curl,apt-transport-https,gnupg,lsb-release,python3-pip
+    state: present
+
+
+- name: Download k8s apt key
+  get_url:
+    url: "{{ K8sDownloadKey }}"
+    dest: "{{ K8sDownloadKeyDist }}"
+
+
+- name: Add k8s APT repository
+  shell:  echo "deb [signed-by=/usr/share/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main" > /etc/apt/sources.list.d/kubernetes.list
+
+- name: update apt 
+  apt:
+    update_cache: yes
+
+
+- name: install kubectl
+  apt:
+    name: kubectl=1.25.0-00,unzip
+    state: present
+
+
+- name: Download awscli
+  get_url:
+    url: "{{ awscliDownloadLink }}"
+    dest: "{{ awscliDownloadDist }}"
+
+
+- name: unzip awscli installer 
+  unarchive:
+    src: "{{ awscliDownloadDist }}"
+    dest: /opt/
+    remote_src: true
+
+
+- name: change owner for directory 
+  file:
+    path:  /opt/aws
+    recurse: yes
+    owner: ubuntu
+    group: ubuntu
+    state: directory
+
+
+- name: run to install 
+  shell: /opt/aws/install  --update
+
+
+- name: Update AWS EKS kubeconfig
+  command:
+    cmd: "{{ EksUpdateCommand }}"
+  become: false
