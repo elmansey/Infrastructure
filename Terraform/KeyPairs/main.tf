@@ -11,5 +11,5 @@ resource "aws_key_pair" "tf_key_pair" {
 # store private key pair into my machine to use it with ssh connect 
 resource "local_file" "tf_private_key" {
   content  = tls_private_key.rsa_key.private_key_pem
-  filename = "tf_key_pair.pem"
+  filename = "/home/elmansey/.ssh/key_pair.pem"
 }
