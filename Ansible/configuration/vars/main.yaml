@@ -4,3 +4,7 @@ K8sDownloadKeyDist: /usr/share/keyrings/kubernetes-archive-keyring.gpg
 awscliDownloadLink: https://awscli.amazonaws.com/awscli-exe-linux-x86_64-2.8.9.zip
 awscliDownloadDist: /opt/awscliv2.zip
 EksUpdateCommand: "aws eks update-kubeconfig --region eu-central-1 --name EksCluster"
+
+
+
+
