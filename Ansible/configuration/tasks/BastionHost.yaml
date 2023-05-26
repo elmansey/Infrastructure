@@ -14,9 +14,19 @@
     url: "{{ K8sDownloadKey }}"
     dest: "{{ K8sDownloadKeyDist }}"
 
+- name: Download k8s apt key
+  apt_key:
+    url: "{{ K8sDownloadKey }}"
+    state: present
+
 
 - name: Add k8s APT repository
-  shell:  echo "deb [signed-by=/usr/share/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main" > /etc/apt/sources.list.d/kubernetes.list
+  apt_repository:
+    repo: deb https://apt.kubernetes.io/ kubernetes-xenial main
+    state: present
+    filename: kubernetes
+    update_cache: yes
+
 
 - name: update apt 
   apt:

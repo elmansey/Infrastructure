@@ -37,7 +37,11 @@ Before running the deployment script, you will need to have the following:
 - ssh on your local machine to connect to BastionHost to access from it the private cluster
 - A Secret Manager in AWS to store aws credentials stored                                   (aws_access_key_id aws_secret_access_key) to but them in bastion host to connect to cluster by it 
 - A S3 bucket to store the Terraform state file, and DynamoDB to use for state locking. You can include them in `RemoteBackend.tf`
-
+- Make sure you have boto3 and botocore packages to able to use ansible dynamic inventory 
+```
+$ pip install boto3 
+$ pip install botocore 
+```
 ## Installation
 
 1. Navigate to the project directory:
@@ -57,7 +61,7 @@ Before running the deployment script, you will need to have the following:
 - After run the Up.sh script at the first the terraform infrastracture code will applied in aws .
 - Then the ansible role will fired to get the BastionHost ip automatically by ansible dynamic inventory. 
 - Then the role will be applied to configre the bastionHost Ec2:
-  1- Install some prerequiest backages such as `awscli` to use it to update kubeconfig file and `kubectl` to able to connect to the Cluster from it
+  1. Install some prerequiest backages such as `awscli` to use it to update kubeconfig file and `kubectl` to able to connect to the Cluster from it
 
 ## Build infrastructure
 ![image](https://github.com/elmansey/Infrastructure/assets/89076648/9590f163-1b07-406f-8f8f-0d61b84b2736)
