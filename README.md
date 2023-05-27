@@ -82,9 +82,23 @@ $ pip install botocore
 
 ![image](https://github.com/elmansey/Infrastructure/assets/89076648/b73a638a-68d4-443a-8f03-45d210aa705e)
 
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/9c670753-aa86-4bc6-8526-8ead85a6af53)
 
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/1bfcd901-af1c-4238-98d0-8a2f0f525bfb)
 
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/8a77d6ed-73df-4499-8514-0589566512fa)
 
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/8c505858-c114-4149-ae48-766ac5e41b62)
+
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/4b8bdd21-91a9-41e7-b578-38c814167c88)
+
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/e4847f40-e204-41c1-a59e-446ddb812c08)
+
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/e15d41de-81be-4379-ba76-0f479211f414)
+
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/24864dfa-e986-4bd9-a59f-0e38b462c5c1)
+
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/c03f9c30-2116-44fa-8fe3-9b09d4313496)
 
 ## Destroy infrastructure
 

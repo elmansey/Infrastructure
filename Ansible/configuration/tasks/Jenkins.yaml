@@ -12,12 +12,12 @@
 
 - name: change owner for directory 
   file:
-    path:  /opt/jenkins
+    path:  /home/ubuntu/jenkins
     recurse: yes
     owner: ubuntu
     group: ubuntu
     state: directory
-    
+
 
 - name: install kubernetes package
   pip:

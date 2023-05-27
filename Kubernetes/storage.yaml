@@ -11,7 +11,7 @@ spec:
   persistentVolumeReclaimPolicy: Retain
   storageClassName: standard
   hostPath:
-    path: /opt/jenkins
+    path: /home/ubuntu/jenkins
 
 ---
 apiVersion: v1
