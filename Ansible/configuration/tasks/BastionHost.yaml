@@ -61,7 +61,7 @@
     state: directory
 
 
-- name: run to install 
+- name: run to install awscli
   shell: /opt/aws/install  --update
 
 

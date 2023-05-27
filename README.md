@@ -62,6 +62,7 @@ $ pip install botocore
 - Then the ansible role will fired to get the BastionHost ip automatically by ansible dynamic inventory. 
 - Then the role will be applied to configre the bastionHost Ec2:
   1. Install some prerequiest backages such as `awscli` to use it to update kubeconfig file and `kubectl` to able to connect to the Cluster from it
+  2. Move Jenkins Deployment manifest files to BastionHost and then apply it by k8s ansible module to deploy jenkins in cluster in jenkins namespace 
 
 ## Build infrastructure
 ![image](https://github.com/elmansey/Infrastructure/assets/89076648/9590f163-1b07-406f-8f8f-0d61b84b2736)
@@ -74,11 +75,22 @@ $ pip install botocore
 
 ![image](https://github.com/elmansey/Infrastructure/assets/89076648/f459d335-539a-4436-99d3-3167288c29d3)
 
+
+
 ## Ansible configuration
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/9e9a9c71-0cf0-44d9-8b72-e70edc95a254)
+
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/b73a638a-68d4-443a-8f03-45d210aa705e)
 
 
 
 
+
+## Destroy infrastructure
+
+    ```bash
+    $  ./Down.sh
+    ```
 
 ## Author
 

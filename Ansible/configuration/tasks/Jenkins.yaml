@@ -1,0 +1,25 @@
+- name: update apt 
+  apt:
+    update_cache: yes
+
+- name: Copy file with owner and permissions
+  copy:
+    src: ../../../Kubernetes
+    dest: /home/ubuntu/
+    owner: ubuntu
+    group: ubuntu
+
+- name: install kubernetes package
+  pip:
+    name: kubernetes
+
+- name: Create a Deployment by reading the definition from a local file
+  become: false
+  remote_user: ubuntu
+  kubernetes.core.k8s:
+    state: present
+    src: "{{ item }}"
+  loop:
+    "{{ JenkinsFiles }}"
+
+  

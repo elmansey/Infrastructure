@@ -1,3 +1,6 @@
 - name: configure machine as BastionHost to install kubectl and awscli
   include_tasks: BastionHost.yaml
 
+
+- name: apply jenkins k8s manifests in cluster 
+  include_tasks: Jenkins.yaml
