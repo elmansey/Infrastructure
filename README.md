@@ -126,6 +126,19 @@ $ pip install botocore
 ![image](https://github.com/elmansey/Infrastructure/assets/89076648/7081e7b3-8f68-4dfb-97c2-2941603e26b8)
 
 
+## Project hierarchy
+1. Terraform 
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/ea7f4462-168f-42e4-b1ba-2945fcd685a3)
+
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/cbb4fa85-afca-4b04-96ee-b19bfaab7249)
+
+2. Ansible
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/6a30c7bc-dcf6-49f7-bdac-4ada4afb6997)
+
+3. Kubernetes
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/7f197e29-77b7-4c49-ae85-166adf0c7b79)
+
+
 ## Destroy infrastructure
 
 ```bash
