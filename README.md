@@ -82,8 +82,6 @@ $ pip install botocore
 
 ![image](https://github.com/elmansey/Infrastructure/assets/89076648/b73a638a-68d4-443a-8f03-45d210aa705e)
 
-![image](https://github.com/elmansey/Infrastructure/assets/89076648/9c670753-aa86-4bc6-8526-8ead85a6af53)
-
 ![image](https://github.com/elmansey/Infrastructure/assets/89076648/1bfcd901-af1c-4238-98d0-8a2f0f525bfb)
 
 ![image](https://github.com/elmansey/Infrastructure/assets/89076648/8a77d6ed-73df-4499-8514-0589566512fa)
