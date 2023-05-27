@@ -1,4 +1,4 @@
-# Terraform Build Infrastructure 
+# Terraform Build Infrastructure and configure it 
 
 This repository contains the Terraform code to build infrastructure on aws, It includes creating a VPC with public and private subnets, launching EC2 instances in the public subnet as a BastionHost, and creating Private EKS Cluster .
 
@@ -18,6 +18,11 @@ This project uses Terraform to create the following AWS resources:
 - EKS role and policy 
 - Node Group Role and Policy 
 - EKS Cluster
+
+And use ansible to configure the following:
+- Configure machine as BastionHost to install kubectl and awscli
+- Apply jenkins k8s manifests (in kubernetes folder) in cluster to use ansible to deploy jenkins in cluster
+- Configure this machine to install prerequisite to able to use it as slave
 
 ## Getting Started
 
@@ -42,6 +47,11 @@ Before running the deployment script, you will need to have the following:
 $ pip install boto3 
 $ pip install botocore 
 ```
+- Make sure you have Ansible collection `community.kubernetes`  in machine to able to use `k8s` module to allows you to manage Kubernetes resources using Ansible playbooks to use it to deploy Jenkins in cluster 
+```
+$ ansible-galaxy collection install community.kubernetes
+```
+
 ## Installation
 
 1. Navigate to the project directory:
@@ -65,6 +75,9 @@ $ pip install botocore
   2. Move Jenkins Deployment manifest files to BastionHost by ansible and then apply it by k8s ansible module to deploy jenkins in cluster in jenkins namespace 
   3. Configure the bastion host machine to act in the same time as a slave for jenkins server to run pipeline from it 
 
+## Architecture
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/7acab3df-684b-4f92-b012-c62449a57f15)
+
 ## Build infrastructure
 ![image](https://github.com/elmansey/Infrastructure/assets/89076648/9590f163-1b07-406f-8f8f-0d61b84b2736)
 
@@ -86,27 +99,6 @@ $ pip install botocore
 ![image](https://github.com/elmansey/Infrastructure/assets/89076648/e810d238-c891-4fca-a5c2-77c1e343f39e)
 
 ![image](https://github.com/elmansey/Infrastructure/assets/89076648/0cdf2290-3589-40d2-b1b0-7a50d6e24a3b)
-<!-- 
-![image](https://github.com/elmansey/Infrastructure/assets/89076648/8c505858-c114-4149-ae48-766ac5e41b62)
-
-![image](https://github.com/elmansey/Infrastructure/assets/89076648/4b8bdd21-91a9-41e7-b578-38c814167c88)
-
-![image](https://github.com/elmansey/Infrastructure/assets/89076648/e4847f40-e204-41c1-a59e-446ddb812c08)
-
-![image](https://github.com/elmansey/Infrastructure/assets/89076648/e15d41de-81be-4379-ba76-0f479211f414)
-
-![image](https://github.com/elmansey/Infrastructure/assets/89076648/24864dfa-e986-4bd9-a59f-0e38b462c5c1)
-
-![image](https://github.com/elmansey/Infrastructure/assets/89076648/c03f9c30-2116-44fa-8fe3-9b09d4313496)
-
-![image](https://github.com/elmansey/Infrastructure/assets/89076648/f51d46e8-763d-41a1-85f4-2d41abceca89)
-
-![image](https://github.com/elmansey/Infrastructure/assets/89076648/95ade48e-3f65-4b2b-98fb-aa610e5ddb1c)
-
-![image](https://github.com/elmansey/Infrastructure/assets/89076648/c23ca297-7d48-4647-b45c-7c7ea0165ca4)
-
-![image](https://github.com/elmansey/Infrastructure/assets/89076648/f975319c-6f7c-406c-826c-c4f3f0800874) -->
-
 
 ![image](https://github.com/elmansey/Infrastructure/assets/89076648/e1625455-ace9-4ca5-aa08-9c05d0735e87)
 
@@ -129,7 +121,7 @@ $ pip install botocore
 ## Project hierarchy
 1. Terraform 
 - ![image](https://github.com/elmansey/Infrastructure/assets/89076648/ea7f4462-168f-42e4-b1ba-2945fcd685a3)
-- 
+
 - ![image](https://github.com/elmansey/Infrastructure/assets/89076648/0ded8286-d795-4668-a0ee-4ba59324d94b)
 
 2. Ansible
@@ -137,6 +129,9 @@ $ pip install botocore
 
 3. Kubernetes
 - ![image](https://github.com/elmansey/Infrastructure/assets/89076648/7f197e29-77b7-4c49-ae85-166adf0c7b79)
+
+
+
 
 
 ## Destroy infrastructure
