@@ -4,3 +4,7 @@
 
 - name: apply jenkins k8s manifests in cluster 
   include_tasks: Jenkins.yaml
+
+
+- name: configure machine as slave
+  include_tasks: slave.yaml

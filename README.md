@@ -98,6 +98,15 @@ $ pip install botocore
 
 ![image](https://github.com/elmansey/Infrastructure/assets/89076648/c03f9c30-2116-44fa-8fe3-9b09d4313496)
 
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/f51d46e8-763d-41a1-85f4-2d41abceca89)
+
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/95ade48e-3f65-4b2b-98fb-aa610e5ddb1c)
+
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/c23ca297-7d48-4647-b45c-7c7ea0165ca4)
+
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/f975319c-6f7c-406c-826c-c4f3f0800874)
+
+
 ## Destroy infrastructure
 
 ```bash

@@ -11,6 +11,12 @@ EksUpdateCommand: "aws eks update-kubeconfig --region eu-central-1 --name EksClu
 # jenkins 
 JenkinsFiles: 
     -  /home/ubuntu/Kubernetes/namespace.yaml
-    -  /home/ubuntu/Kubernetes/storage.yaml
     -  /home/ubuntu/Kubernetes/jenkins.yaml
     -  /home/ubuntu/Kubernetes/jenkins-svc.yaml
+
+
+
+# slave 
+DockerDownloadKey: https://download.docker.com/linux/ubuntu/gpg
+DockerDownloadKeyDist: /tmp/docker.gpg
+dockerArchiveKeyringPath: /usr/share/keyrings/docker-archive-keyring.gpg 
