@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: jenkins
-        image: jenkins/jenkins:lts-jdk11
+        image: jenkins/jenkins:lts
         volumeMounts:
           - mountPath: /var/jenkins_home
             name: jenkins-volume

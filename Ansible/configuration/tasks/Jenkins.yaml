@@ -9,13 +9,22 @@
     owner: ubuntu
     group: ubuntu
 
+
+- name: change owner for directory 
+  file:
+    path:  /opt/jenkins
+    recurse: yes
+    owner: ubuntu
+    group: ubuntu
+    state: directory
+    
+
 - name: install kubernetes package
   pip:
     name: kubernetes
 
 - name: Create a Deployment by reading the definition from a local file
   become: false
-  remote_user: ubuntu
   kubernetes.core.k8s:
     state: present
     src: "{{ item }}"
