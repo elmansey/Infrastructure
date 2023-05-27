@@ -83,10 +83,10 @@ $ pip install botocore
 
 ![image](https://github.com/elmansey/Infrastructure/assets/89076648/b73a638a-68d4-443a-8f03-45d210aa705e)
 
-![image](https://github.com/elmansey/Infrastructure/assets/89076648/1bfcd901-af1c-4238-98d0-8a2f0f525bfb)
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/e810d238-c891-4fca-a5c2-77c1e343f39e)
 
-![image](https://github.com/elmansey/Infrastructure/assets/89076648/8a77d6ed-73df-4499-8514-0589566512fa)
-
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/0cdf2290-3589-40d2-b1b0-7a50d6e24a3b)
+<!-- 
 ![image](https://github.com/elmansey/Infrastructure/assets/89076648/8c505858-c114-4149-ae48-766ac5e41b62)
 
 ![image](https://github.com/elmansey/Infrastructure/assets/89076648/4b8bdd21-91a9-41e7-b578-38c814167c88)
@@ -105,7 +105,25 @@ $ pip install botocore
 
 ![image](https://github.com/elmansey/Infrastructure/assets/89076648/c23ca297-7d48-4647-b45c-7c7ea0165ca4)
 
-![image](https://github.com/elmansey/Infrastructure/assets/89076648/f975319c-6f7c-406c-826c-c4f3f0800874)
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/f975319c-6f7c-406c-826c-c4f3f0800874) -->
+
+
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/e1625455-ace9-4ca5-aa08-9c05d0735e87)
+
+
+
+## Add slave
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/dd17c3b7-42ff-43f8-bb50-7c73a684b270)
+
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/bdba982b-03b3-4e69-b6c8-0e917c4c3cc7)
+
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/d5440759-5efe-43d2-a272-bfbf626d4964)
+
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/e9a38861-9b80-4097-985d-b9007f7473cd)
+
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/e8532b03-93b2-4471-ba52-bfcda4329260)
+
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/7081e7b3-8f68-4dfb-97c2-2941603e26b8)
 
 
 ## Destroy infrastructure
