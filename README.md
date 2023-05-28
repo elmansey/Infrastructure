@@ -20,7 +20,7 @@ This project uses Terraform to create the following AWS resources:
 - EKS Cluster
 
 And use ansible to configure the following:
-- Configure machine as BastionHost to install kubectl and awscli
+- Configure machine as BastionHost by installing kubectl and awscli
 - Apply jenkins k8s manifests (in kubernetes folder) in cluster to use ansible to deploy jenkins in cluster
 - Configure this machine to install prerequisite to able to use it as slave
 
@@ -139,6 +139,8 @@ $ ansible-galaxy collection install community.kubernetes
 ```bash
 $  ./Down.sh
 ```
+
+## App Rebo That Used At CI CD Stages [here](https://github.com/elmansey/Application)
 
 ## Author
 
