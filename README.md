@@ -89,7 +89,7 @@ $ ansible-galaxy collection install community.kubernetes
 ## Ansible configuration
 1. Then the ansible role will fired to get the BastionHost ip automatically by ansible dynamic inventory. 
 - The first task in role to configre the bastionHost machine by installing some prerequiest backages such as `awscli` to use it to update kubeconfig file and `kubectl` to able to connect to the Cluster from it
-![image](https://github.com/elmansey/Infrastructure/assets/89076648/ce94a0db-c7a7-4f22-a58e-32e4cb55322a)
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/f5f2082e-f256-4e50-b2ec-bc266a570716)
 
 
 - After BastionHost task finished the second task will fired to Move Jenkins Deployment manifest files to BastionHost by ansible and then apply it by k8s ansible module to deploy jenkins in cluster in jenkins namespace 
