@@ -76,116 +76,126 @@ $ ansible-galaxy collection install community.kubernetes
   3. Configure the bastion host machine to act in the same time as a slave for jenkins server to run pipeline from it 
 
 ## Architecture
-![image](https://github.com/elmansey/Infrastructure/assets/89076648/7acab3df-684b-4f92-b012-c62449a57f15)
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/fee878e4-99be-4dff-a6e9-5eb80a55cd54)
 
 ## Build infrastructure
 
 1. After run the Up.sh script at the first the terraform infrastracture code will applied in aws
-- ![image](https://github.com/elmansey/Infrastructure/assets/89076648/9590f163-1b07-406f-8f8f-0d61b84b2736)
-- ![image](https://github.com/elmansey/Infrastructure/assets/89076648/8e5c6528-8421-4b48-91b4-9c3121dd000b)
-- ![image](https://github.com/elmansey/Infrastructure/assets/89076648/0c45604a-53cf-40e3-a04d-aca1849baf93)
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/6bf7269b-0a28-433d-bb57-808356e3edb0)
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/ee205c00-8174-4f5b-8170-730e2838e6af)
+
+
 
 ## Ansible configuration
 1. Then the ansible role will fired to get the BastionHost ip automatically by ansible dynamic inventory. 
 - The first task in role to configre the bastionHost machine by installing some prerequiest backages such as `awscli` to use it to update kubeconfig file and `kubectl` to able to connect to the Cluster from it
-![image](https://github.com/elmansey/Infrastructure/assets/89076648/89a69f2a-92ea-4948-a4b2-463d83a826e3)
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/ce94a0db-c7a7-4f22-a58e-32e4cb55322a)
+
 
 - After BastionHost task finished the second task will fired to Move Jenkins Deployment manifest files to BastionHost by ansible and then apply it by k8s ansible module to deploy jenkins in cluster in jenkins namespace 
-![image](https://github.com/elmansey/Infrastructure/assets/89076648/1dd6bd0b-6d6f-4326-8181-f45eb8ac1d93)
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/7a101249-1532-4146-9d4a-bd0733858af6)
 
 - After Jenkins task finished the third task will fired to Configure the bastion host machine to act in the same time as a slave for jenkins server to run pipeline from it 
-![image](https://github.com/elmansey/Infrastructure/assets/89076648/acfeb554-d1e6-4881-ae99-affdd5690ab3)
-![image](https://github.com/elmansey/Infrastructure/assets/89076648/198f6d0e-e6d6-4048-93d9-a357553a8fce)
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/60715a25-7010-4e4f-b1c1-b5e81e238203)
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/2c67f1f1-2984-4df5-85c0-69a3c81ea94e)
 
 
 ## Connect to BastioHost
-![image](https://github.com/elmansey/Infrastructure/assets/89076648/2008ac8e-76ba-4648-aaa8-65ebf17c9b11)
-![image](https://github.com/elmansey/Infrastructure/assets/89076648/ed3730c0-7e6f-49b0-94df-edf44d2a84d9)
-![image](https://github.com/elmansey/Infrastructure/assets/89076648/391d3129-4264-4a4d-bbdc-2932d00110c0)
-
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/62f15d58-198f-4617-bbc6-718658c54337)
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/9b2a931b-dc26-415a-bdbd-ce6aadd0e59f)
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/341d8c1d-a46a-45e2-9a94-ccef6d761f3f)
 
 
 ## Jenkins Up
-![image](https://github.com/elmansey/Infrastructure/assets/89076648/24f961db-5bec-48a1-881b-db80053f7654)
-![image](https://github.com/elmansey/Infrastructure/assets/89076648/f6ab9292-8e5e-45c7-a234-99e962c68eb6)
-![image](https://github.com/elmansey/Infrastructure/assets/89076648/2e7945a8-9900-4d45-b501-cce32f8962de)
-![image](https://github.com/elmansey/Infrastructure/assets/89076648/1ea08d2c-1e48-4170-8958-24c6e9765503)
-![image](https://github.com/elmansey/Infrastructure/assets/89076648/3daba51b-0c87-4132-a8eb-904b8edd86a1)
-![image](https://github.com/elmansey/Infrastructure/assets/89076648/be3a5da3-7d91-4938-adcb-0b25c298de81)
-![image](https://github.com/elmansey/Infrastructure/assets/89076648/247fb66a-955a-42a6-ab67-93cae5cb7d05)
-![image](https://github.com/elmansey/Infrastructure/assets/89076648/d5754f82-2d95-4f18-b521-91b498f43513)
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/21668d5e-088c-49a5-b62c-a99200f861cb)
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/96c54ebd-d30d-41bc-af79-22134239a62e)
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/8ea368ef-9839-4ae2-818a-f6ae00af9766)
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/f1ba571e-d0d5-43de-a18b-22d84dc4debe)
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/f9bdf68d-48ce-4e48-b5e4-7f3684bc5f53)
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/b1bf0264-1dc7-4e0c-a591-9602341b3ff4)
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/39f2c42c-133c-4dd9-9506-0ad27af8865d)
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/b2d562cc-f8d9-4569-80e3-aafee3b795e3)
+
 
 
 ## Add credentials
-![image](https://github.com/elmansey/Infrastructure/assets/89076648/56b14551-bfe6-4d99-89d2-dda68e280474)
-![image](https://github.com/elmansey/Infrastructure/assets/89076648/58114c89-b4ec-4b5e-9237-73301ae73256)
-![image](https://github.com/elmansey/Infrastructure/assets/89076648/7835a3e7-6370-491a-9b51-698d9c84a986)
-![image](https://github.com/elmansey/Infrastructure/assets/89076648/add06711-162e-4de8-8464-c1be5610a424)
-![image](https://github.com/elmansey/Infrastructure/assets/89076648/8a8d7ac0-a15b-4eab-8652-f1cafcfbd82c)
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/edd73a62-87f5-4e6c-913a-faeac6820cbc)
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/99251a31-2aa6-475c-8b96-3654b31f0d56)
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/daf31851-5c15-4110-bde9-14967ed335f3)
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/dd1705e5-ef43-4070-9646-86b3ae8e436f)
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/41d773a2-dfd8-4a7d-9cca-8246172e34cd)
 
 
 ## Add slave
-![image](https://github.com/elmansey/Infrastructure/assets/89076648/75d74ee5-04d2-448a-b73b-ec119573b463)
-![image](https://github.com/elmansey/Infrastructure/assets/89076648/218a2ff5-cc8b-4930-b466-93763f9fdba2)
-![image](https://github.com/elmansey/Infrastructure/assets/89076648/56716317-a5fd-49b4-a29c-5aa8fe3d21fe)
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/848ee646-83e2-4006-a9de-7ec07fcd9e72)
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/9fa03e52-60a1-4ce0-badc-a0ff9eab9fdb)
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/a1108256-d1df-40bf-bf85-172d0fb94578)
+
+
 - Get BastionHost public DNS or public ip
-![image](https://github.com/elmansey/Infrastructure/assets/89076648/7263b8ad-f7df-483e-809e-1b2ffd66ff7a)
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/c4dbf481-03a3-4034-8fe2-9d493a86657a)
+
 - Add slave private key 
-![image](https://github.com/elmansey/Infrastructure/assets/89076648/18aa0546-9e28-4aff-8629-ce1c222729b2)
-![image](https://github.com/elmansey/Infrastructure/assets/89076648/e2c2185b-c388-476b-92c9-d118a6aa847d)
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/14c99138-4e12-4950-bf6f-8b47b1d0ad69)
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/c1666bf8-eecf-45fd-9e91-8597bd9d44cd)
+
 - Slave added 
-![image](https://github.com/elmansey/Infrastructure/assets/89076648/87e65555-6d9a-4a0b-a94d-2f1309566942)
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/676bfa82-496b-403c-bd47-35cdb168de0b)
 
 
 ## Install GitHub Integration Plugin
-![image](https://github.com/elmansey/Infrastructure/assets/89076648/dd9229f4-0afd-4f65-af76-723c58de021b)
-![image](https://github.com/elmansey/Infrastructure/assets/89076648/3cca2154-db69-4314-90a1-1405cbf7b267)
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/08a33506-cb6f-4827-bc3c-539591bc1a50)
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/47cef913-fad9-44c6-9f86-5def1a2ed5af)
 
 
 ## Create Webhook
-![image](https://github.com/elmansey/Infrastructure/assets/89076648/0231be83-3c96-4778-9074-ea463a212ad1)
-![image](https://github.com/elmansey/Infrastructure/assets/89076648/a89eddee-f999-474c-8057-ce2ae0d92584)
-![image](https://github.com/elmansey/Infrastructure/assets/89076648/b901b205-ad44-4061-a1bb-9f2c07da78b3)
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/374e0892-6bf1-458a-9e86-797b990d154c)
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/9ebce66a-f358-4cd0-8e64-b13bf8801794)
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/40dbd01d-d359-41a9-91ba-7f4db3508c3f)
 
 
 ## Ci CD Pipeline 
-![image](https://github.com/elmansey/Infrastructure/assets/89076648/db297642-60d9-4f38-a721-f466e5f647dc)
-- Make pipeline triggered by the created Webhook
-![image](https://github.com/elmansey/Infrastructure/assets/89076648/70b4686c-59e6-47ba-bed8-021fedcd8759)
-![image](https://github.com/elmansey/Infrastructure/assets/89076648/16e3fbe1-b276-428f-8d7f-4616056847e1)
-- Create deployment files
-![image](https://github.com/elmansey/Infrastructure/assets/89076648/9b5856c1-1bbc-48c8-8d90-48fc4899f1df)
-![image](https://github.com/elmansey/Infrastructure/assets/89076648/6d7ff422-eccb-4972-a0aa-3300684bf1a7)
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/3a5fa1b7-0d71-4bc7-8dd2-b543d9517dc3)
 
+- Make pipeline triggered by the created Webhook
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/9033293f-a673-41e5-96b6-01beec778a39)
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/374de917-5423-4355-bde9-adda43d71be1)
+
+- Create deployment files
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/10391fac-0a37-4e5e-bbd8-89ada9553e79)
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/4d46c148-b863-437a-96b2-75ac90913513)
 
 # Application 
-![image](https://github.com/elmansey/Infrastructure/assets/89076648/44b20e49-ee65-4535-88e5-8cc0cf58285f)
-![image](https://github.com/elmansey/Infrastructure/assets/89076648/690c1e91-d6e9-4b25-824a-da2cecaf6494)
-![image](https://github.com/elmansey/Infrastructure/assets/89076648/62a7edb2-23fa-4a50-a330-633c40b999ae)
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/5585685f-4786-4093-8faf-f0c3ad7dde04)
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/9ddc68db-b1e8-4f4f-a95f-b7373e92e524)
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/07aace23-b8fc-4444-8aa7-034e8d335d96)
 
 
 ## Test webhook
 - Change background color from black to purple
-![image](https://github.com/elmansey/Infrastructure/assets/89076648/870049b4-174b-4f5b-9311-8bcf88a3332f)
-![image](https://github.com/elmansey/Infrastructure/assets/89076648/33e7942e-d334-43a5-b314-71b1d96f856c)
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/1f9d89dc-fc92-422f-9905-83c68560440d)
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/eec9247f-614a-4036-8947-3bcc21e827ba)
+
 - Successfully triggered pipeline
-![image](https://github.com/elmansey/Infrastructure/assets/89076648/07583bf0-e1b5-4c5a-8864-60b853ec0c91)
-![image](https://github.com/elmansey/Infrastructure/assets/89076648/9d76b2a6-abd8-4ef8-b6f9-4dfd86c22111)
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/3e174d6a-6bb1-4bfa-a780-04170d4cad93)
+![image](https://github.com/elmansey/Infrastructure/assets/89076648/667b7401-1b9a-49db-8e33-a882eeccbee2)
 
 
 
 
 ## Project hierarchy
 1. Terraform 
-- ![image](https://github.com/elmansey/Infrastructure/assets/89076648/ea7f4462-168f-42e4-b1ba-2945fcd685a3)
 
-- ![image](https://github.com/elmansey/Infrastructure/assets/89076648/0ded8286-d795-4668-a0ee-4ba59324d94b)
+- ![image](https://github.com/elmansey/Infrastructure/assets/89076648/5d8c4651-5700-49f2-9118-b51add7ac2c9)
+- ![image](https://github.com/elmansey/Infrastructure/assets/89076648/3245f245-d43c-43c6-b181-3d5a13c3dafd)
+
 
 2. Ansible
-- ![image](https://github.com/elmansey/Infrastructure/assets/89076648/6a30c7bc-dcf6-49f7-bdac-4ada4afb6997)
+- ![image](https://github.com/elmansey/Infrastructure/assets/89076648/9b497cf9-6fa8-445b-abbf-783eb3e3e77a)
+
 
 3. Kubernetes
-- ![image](https://github.com/elmansey/Infrastructure/assets/89076648/7f197e29-77b7-4c49-ae85-166adf0c7b79)
+- ![image](https://github.com/elmansey/Infrastructure/assets/89076648/145ab3b9-f604-47bd-9ebe-2b4b47aa2138)
 
 
 
