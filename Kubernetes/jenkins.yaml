@@ -21,10 +21,11 @@ spec:
         ports:
         - containerPort: 8080
 
+
       livenessProbe:
         httpGet:
           path: "/login"
-          port: 8080
+          port: 80
           initialDelaySeconds: 90
           periodSeconds: 10
           timeoutSeconds: 5
@@ -33,7 +34,7 @@ spec:
       readinessProbe:
         httpGet:
           path: "/login"
-          port: 8080
+          port: 80
           initialDelaySeconds: 60
           periodSeconds: 10
           timeoutSeconds: 5
