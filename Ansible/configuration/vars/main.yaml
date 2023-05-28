@@ -11,7 +11,6 @@ EksUpdateCommand: "aws eks update-kubeconfig --region eu-central-1 --name EksClu
 # jenkins 
 JenkinsFiles: 
     -  /home/ubuntu/Kubernetes/namespace.yaml
-    -  /home/ubuntu/Kubernetes/storage.yaml
     -  /home/ubuntu/Kubernetes/jenkins.yaml
     -  /home/ubuntu/Kubernetes/jenkins-svc.yaml
 
